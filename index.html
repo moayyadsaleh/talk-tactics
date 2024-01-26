@@ -18,13 +18,20 @@
     <div class="jumbotron">
       <h2>Welcome to TalkTactics</h2>
       <p>
-        TalkTactics, developed by Chi-Chack LLC, is a cutting-edge language
-        learning app designed to enhance communication skills. It offers a
-        unique approach where users choose real-life situations, like 'Excusing
-        oneself' or 'Expressing pleasure,' and provides comprehensive lists of
-        phrases with translations. The app goes further by offering audio
-        recordings, ensuring users grasp both written and spoken language
-        nuances.
+        TalkTactics, developed by Chi-Chack LLC, stands as an innovative
+        language learning application crafted to enhance the communication
+        skills of soldiers. It introduces a distinctive approach, allowing users
+        to select real-life situations such as 'Excusing oneself' or 'Expressing
+        pleasure,' and presents comprehensive lists of phrases along with
+        translations. Going beyond, the app enriches the learning experience
+        with audio recordings, ensuring the soldiers master both written and
+        spoken language intricacies. When a soldier finds themselves in a
+        scenario they didn't study beforehand, such as needing to grab someone's
+        attention, interject, express support for an opinion, or articulate a
+        phrase conveying excitement or shock, this app proves invaluable.
+        TalkTactics caters to these spontaneous language needs, supporting users
+        in Arabic, Russian, and French, especially when navigating interactions
+        in a host nation.
       </p>
       <div class="logo-container">
         <div class="logo">
@@ -53,112 +60,6 @@
     />
 
     <div id="jsonContent"></div>
-
-    <script>
-      // Function to fetch JSON data
-      async function fetchJsonData() {
-        try {
-          const response = await fetch("data.json");
-          const jsonData = await response.json();
-          return jsonData;
-        } catch (error) {
-          console.error("Error fetching JSON data:", error);
-        }
-      }
-
-      // Function to display JSON data in HTML
-      function displayJsonData(jsonData, selectedLanguage) {
-        var jsonContentDiv = document.getElementById("jsonContent");
-        jsonContentDiv.innerHTML = ""; // Clear existing content
-
-        jsonData.languageFunctions.forEach(function (languageFunction, index) {
-          var functionDiv = document.createElement("div");
-          functionDiv.classList.add("function-div");
-
-          var functionTitle = document.createElement("div");
-          functionTitle.classList.add("function-title");
-          functionTitle.textContent =
-            "Function " + (index + 1) + ": " + languageFunction.function;
-
-          functionDiv.appendChild(functionTitle);
-
-          var detailsDiv = document.createElement("div");
-          detailsDiv.classList.add("function-details");
-
-          languageFunction.translations.forEach(function (translation) {
-            if (translation.language === selectedLanguage) {
-              var translationDiv = document.createElement("div");
-              translationDiv.classList.add("translation");
-              translationDiv.innerHTML =
-                "<strong>Language:</strong> " +
-                translation.language +
-                "<br>" +
-                "<strong>Expression:</strong> " +
-                translation.expression +
-                "<br>" +
-                "<strong>Meaning:</strong> " +
-                translation.meaning;
-
-              // Add audio element
-              if (translation.audio) {
-                var audioElement = document.createElement("audio");
-                audioElement.controls = true;
-                audioElement.src = translation.audio;
-                translationDiv.appendChild(audioElement);
-              }
-
-              translationDiv.innerHTML += "<hr>";
-              detailsDiv.appendChild(translationDiv);
-            }
-          });
-
-          functionDiv.appendChild(detailsDiv);
-
-          // Add click event to toggle details visibility
-          functionDiv.addEventListener("click", function () {
-            detailsDiv.style.display =
-              detailsDiv.style.display === "none" ||
-              detailsDiv.style.display === ""
-                ? "block"
-                : "none";
-          });
-
-          jsonContentDiv.appendChild(functionDiv);
-        });
-      }
-
-      // Function to change language based on user selection
-      async function changeLanguage() {
-        var selectedLanguage =
-          document.getElementById("languageSelector").value;
-        var jsonData = await fetchJsonData();
-        displayJsonData(jsonData, selectedLanguage);
-      }
-
-      // Function to filter language functions based on the search input
-      function filterFunctions() {
-        var searchTerm = document
-          .getElementById("searchBar")
-          .value.toLowerCase();
-        var functionDivs = document.querySelectorAll(".function-div");
-
-        functionDivs.forEach(function (functionDiv) {
-          var functionTitle = functionDiv
-            .querySelector(".function-title")
-            .textContent.toLowerCase();
-          var detailsDiv = functionDiv.querySelector(".function-details");
-          var isVisible = functionTitle.includes(searchTerm);
-
-          if (isVisible) {
-            detailsDiv.style.display = "block";
-          } else {
-            detailsDiv.style.display = "none";
-          }
-        });
-      }
-
-      // Call the function to initially display JSON data for the default language
-      changeLanguage();
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

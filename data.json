@@ -5,9 +5,9 @@
         "translations": [
           {
             "language": "arabic",
-            "expression": "هذا عظيم. هذا مذهل. هذا رائع. هذا رهيب. هذا مدهش",
+            "expression": " هذا رهيب، هذا مدهش",
             "meaning": "That's lovely/wonderful/great!",
-            "audio": "path/to/arabic_audio1.mp3"
+            "audio": "audios/Recording.m4a"
           },
           {
             "language": "french",
@@ -30,7 +30,7 @@
             "language": "arabic",
             "expression": "مرحبا",
             "meaning": "Hello",
-            "audio": "path/to/arabic_audio2.mp3"
+            "audio": "audios/Recording (2).m4a"
           },
           {
             "language": "french",
@@ -53,7 +53,7 @@
             "language": "arabic",
             "expression": "ليس لدي اهتمام",
             "meaning": "I'm not interested",
-            "audio": "path/to/arabic_audio3.mp3"
+            "audio": "audios/Recording (3).m4a"
           },
           {
             "language": "french",
@@ -74,9 +74,9 @@
         "translations": [
           {
             "language": "arabic",
-            "expression": "آمل أن",
+            "expression": "آمل ذلك",
             "meaning": "I hope that",
-            "audio": "path/to/arabic_audio5.mp3"
+            "audio": "audios/Recording (4).m4a"
           },
           {
             "language": "french",
@@ -91,6 +91,214 @@
             "audio": "path/to/russian_audio5.mp3"
           }
         ]
+      },
+      {
+        "function": "Accepting an apology",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "لا لا، على الإطلاق ",
+            "meaning": "Not at all.",
+            "audio": "audios/Recording (5).m4a"
+          },
+          {
+            "language": "french",
+            "expression": "Pas du tout.",
+            "meaning": "Not at all.",
+            "audio": "path/to/french_audio1.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Вовсе нет.",
+            "meaning": "Not at all.",
+            "audio": "path/to/russian_audio1.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Expressing regret, sympathy",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "ما ألومك. أنا آسف جداً.",
+            "meaning": "What a pity. I am so sorry.",
+            "audio": "auidos/Recording (6).m4a"
+          },
+          {
+            "language": "french",
+            "expression": "Quel dommage. Je suis tellement désolé.",
+            "meaning": "What a pity. I am so sorry.",
+            "audio": "path/to/french_audio2.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Как жаль. Прошу прощения.",
+            "meaning": "What a pity. I am so sorry.",
+            "audio": "path/to/russian_audio2.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Attracting attention",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "عذراً. هناك!",
+            "meaning": "Excuse me. Hey there!",
+            "audio": "path/to/arabic_audio3.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Excusez-moi. Hé là !",
+            "meaning": "Excuse me. Hey there!",
+            "audio": "path/to/french_audio3.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Извините. Привет!",
+            "meaning": "Excuse me. Hey there!",
+            "audio": "path/to/russian_audio3.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Exemplifying",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "على سبيل المثال",
+            "meaning": "For example",
+            "audio": "path/to/arabic_audio4.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Par exemple",
+            "meaning": "For example",
+            "audio": "path/to/french_audio4.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Например",
+            "meaning": "For example",
+            "audio": "path/to/russian_audio4.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Summarizing",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "لختصار. لتلخيصها",
+            "meaning": "To sum up. To sum it up.",
+            "audio": "path/to/arabic_audio5.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "En résumé. Pour résumer.",
+            "meaning": "To sum up. To sum it up.",
+            "audio": "path/to/french_audio5.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Подытожим. Вкратце.",
+            "meaning": "To sum up. To sum it up.",
+            "audio": "path/to/russian_audio5.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Checking understanding",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "هل تسمعني؟",
+            "meaning": "Can you hear me?",
+            "audio": "path/to/arabic_audio6.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "M'entendez-vous?",
+            "meaning": "Can you hear me?",
+            "audio": "path/to/french_audio6.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Ты меня слышишь?",
+            "meaning": "Can you hear me?",
+            "audio": "path/to/russian_audio6.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Signaling non-understanding",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "آسف، لا أفهم",
+            "meaning": "Sorry, I don't understand.",
+            "audio": "path/to/arabic_audio7.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Désolé, je ne comprends pas.",
+            "meaning": "Sorry, I don't understand.",
+            "audio": "path/to/french_audio7.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Извините, я не понимаю.",
+            "meaning": "Sorry, I don't understand.",
+            "audio": "path/to/russian_audio7.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Asking for repetition of a sentence",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "ماذا قلت من فضلك؟ هل يمكنك تكرار ذلك من فضلك؟",
+            "meaning": "What did you say please? Could you repeat that please?",
+            "audio": "path/to/arabic_audio8.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Que disiez-vous s'il vous plaît? Pourriez-vous répéter s'il vous plaît?",
+            "meaning": "What did you say please? Could you repeat that please?",
+            "audio": "path/to/french_audio8.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Что вы сказали, пожалуйста? Можете повторить, пожалуйста?",
+            "meaning": "What did you say please? Could you repeat that please?",
+            "audio": "path/to/russian_audio8.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Expressing ignorance of a word or expression",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "لا أعرف كيف أقولها. لا أعرف ما تسميه.",
+            "meaning": "I don't know how to say it. I don't know what you call it.",
+            "audio": "path/to/arabic_audio9.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Je ne sais pas comment le dire. Je ne sais pas comment vous l'appelez.",
+            "meaning": "I don't know how to say it. I don't know what you call it.",
+            "audio": "path/to/french_audio9.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Я не знаю, как это сказать. Я не знаю, как вы это называете.",
+            "meaning": "I don't know how to say it. I don't know what you call it.",
+            "audio": "path/to/russian_audio9.mp3"
+          }
+        ]
       }
     ]
   }
+  

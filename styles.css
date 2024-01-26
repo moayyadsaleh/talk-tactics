@@ -32,6 +32,20 @@ nav a {
   color: whitesmoke;
   padding: 60px;
   text-align: center;
+  border: 2px solid whitesmoke; /* Add a border */
+  border-radius: 15px; /* Add border-radius for rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow */
+}
+
+/* Additional styling for heading and paragraph inside the jumbotron */
+.jumbotron h2 {
+  font-size: 2em; /* Increase font size */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.jumbotron p {
+  font-size: 1.2em; /* Increase font size */
+  line-height: 1.6; /* Increase line height for better readability */
 }
 
 h2 {
@@ -52,9 +66,12 @@ h2 {
   cursor: pointer;
   border-bottom: 1px solid whitesmoke;
   padding: 15px 0;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  margin: 0; /* Set both margins to 0 to move it to the left */
 }
 
 .function-div:hover {
+  background-color: lightgray; /* Light background on hover */
   color: maroon;
 }
 
@@ -62,19 +79,39 @@ h2 {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
+  color: maroon; /* Change function title color */
 }
 
 .function-details {
   display: none;
+  margin-top: 10px; /* Add space above details */
+}
+
+/* Add hover effect for function-details when function-div is hovered */
+.function-div:hover .function-details {
+  color: maroon;
 }
 
 .translation {
   margin-bottom: 10px;
-  color: black;
+  color: #333; /* Change text color */
 }
 
-audio {
-  margin-left: 10px;
+.translation strong {
+  color: maroon; /* Change color of "Language:", "Expression:", "Meaning:" */
+}
+
+.audio {
+  margin-top: 5px; /* Adjusted margin to give space above the audio player */
+  background-color: maroon;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.audio-container {
+  margin-top: 10px; /* Add space above the audio player */
 }
 
 .logo-container {
@@ -85,6 +122,7 @@ audio {
 .logo img {
   max-width: 200px;
 }
+
 #searchBar {
   margin: 10px;
   padding: 8px;
@@ -92,6 +130,7 @@ audio {
   box-sizing: border-box;
   font-size: 14px; /* Adjusted font size */
 }
+
 #languageSelector {
   font-size: 16px;
   font-family: serif;
@@ -102,6 +141,11 @@ audio {
   background-color: whitesmoke;
   color: black;
 }
+
+#languageSelector:hover {
+  background-color: #ddd;
+}
+
 label {
   font-size: 18px;
   color: maroon;
