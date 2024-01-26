@@ -4,46 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
     <title>TalkTactics</title>
   </head>
   <body>
     <header></header>
 
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="https://www.chi-chack.com/">Home</a>
+      <a href="https://www.chi-chack.com/">About</a>
+      <a href="https://www.chi-chack.com/">Contact</a>
     </nav>
-
-    <div class="jumbotron">
-      <h2>Welcome to TalkTactics</h2>
-      <p>
-        TalkTactics, developed by Chi-Chack LLC, stands as an innovative
-        language learning application crafted to enhance the communication
-        skills of soldiers. It introduces a distinctive approach, allowing users
-        to select real-life situations such as 'Excusing oneself' or 'Expressing
-        pleasure,' and presents comprehensive lists of phrases along with
-        translations. Going beyond, the app enriches the learning experience
-        with audio recordings, ensuring the soldiers master both written and
-        spoken language intricacies. When a soldier finds themselves in a
-        scenario they didn't study beforehand, such as needing to grab someone's
-        attention, interject, express support for an opinion, or articulate a
-        phrase conveying excitement or shock, this app proves invaluable.
-        TalkTactics caters to these spontaneous language needs, supporting users
-        in Arabic, Russian, and French, especially when navigating interactions
-        in a host nation.
-      </p>
-      <div class="logo-container">
-        <div class="logo">
+    <div class="container">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="https://cdn2.picryl.com/photo/2011/03/15/future-special-operations-soldiers-study-urdu-during-1b43ea-1024.jpg"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+            Welcome to TalkTactics
+          </h1>
+          <p class="lead">
+            TalkTactics, developed by Chi-Chack LLC, stands as an innovative
+            language learning application crafted to enhance the communication
+            skills of soldiers. It introduces a distinctive approach, allowing
+            users to select real-life situations. When a soldier finds
+            themselves in a scenario they didn't study beforehand, such as
+            needing to grab someone's attention, interject, express support for
+            an opinion, or articulate a phrase conveying excitement or shock,
+            this app proves invaluable.
+          </p>
           <img
             src="https://www.chi-chack.com/wp-content/uploads/2022/10/15th-Anniversary-Logo-Final-Transparent-1.png"
-            alt="Chi-Chack LLC Logo"
+            class="logo"
+            alt="TalkTactics Logo"
           />
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start"></div>
         </div>
       </div>
     </div>
 
-    <h2>Language Functions</h2>
+    <h2>Choose your language, then pick the Interaction, or Search for it.</h2>
     <!-- New language selection dropdown -->
     <select id="languageSelector" onchange="changeLanguage()">
       <option value="arabic">Learn Arabic</option>
@@ -60,6 +73,24 @@
     />
 
     <div id="jsonContent"></div>
+    <footer class="footer">
+      <p>&copy; 2024 Chi-Chack LLC. All rights reserved.</p>
+    </footer>
     <script src="index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

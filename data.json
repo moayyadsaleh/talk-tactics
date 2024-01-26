@@ -120,7 +120,7 @@
         "translations": [
           {
             "language": "arabic",
-            "expression": "ما ألومك. أنا آسف جداً.",
+            "expression": "آسف جداً لسماع ذلك .",
             "meaning": "What a pity. I am so sorry.",
             "audio": "auidos/Recording (6).m4a"
           },
@@ -143,7 +143,7 @@
         "translations": [
           {
             "language": "arabic",
-            "expression": "عذراً. هناك!",
+            "expression": "عذراً. يا أخ!",
             "meaning": "Excuse me. Hey there!",
             "audio": "path/to/arabic_audio3.mp3"
           },
@@ -189,7 +189,7 @@
         "translations": [
           {
             "language": "arabic",
-            "expression": "لختصار. لتلخيصها",
+            "expression": "لاختصار ذلك. لتلخيص ذلك",
             "meaning": "To sum up. To sum it up.",
             "audio": "path/to/arabic_audio5.mp3"
           },
