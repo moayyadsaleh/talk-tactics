@@ -1,0 +1,96 @@
+{
+    "languageFunctions": [
+      {
+        "function": "Expressing pleasure, happiness",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "هذا عظيم. هذا مذهل. هذا رائع. هذا رهيب. هذا مدهش",
+            "meaning": "That's lovely/wonderful/great!",
+            "audio": "path/to/arabic_audio1.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "C'est génial. C'est incroyable. C'est merveilleux.",
+            "meaning": "That's great. That's amazing. That's wonderful.",
+            "audio": "path/to/french_audio1.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Это замечательно. Это удивительно. Это чудесно.",
+            "meaning": "That's wonderful. That's amazing. That's great.",
+            "audio": "path/to/russian_audio1.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Greeting",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "مرحبا",
+            "meaning": "Hello",
+            "audio": "path/to/arabic_audio2.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Bonjour",
+            "meaning": "Good morning",
+            "audio": "path/to/french_audio2.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Привет",
+            "meaning": "Hi",
+            "audio": "path/to/russian_audio2.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Expressing lack of interest",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "ليس لدي اهتمام",
+            "meaning": "I'm not interested",
+            "audio": "path/to/arabic_audio3.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "Ça ne m'intéresse pas",
+            "meaning": "I'm not interested",
+            "audio": "path/to/french_audio3.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Мне не интересно",
+            "meaning": "I'm not interested",
+            "audio": "path/to/russian_audio3.mp3"
+          }
+        ]
+      },
+      {
+        "function": "Expressing hope",
+        "translations": [
+          {
+            "language": "arabic",
+            "expression": "آمل أن",
+            "meaning": "I hope that",
+            "audio": "path/to/arabic_audio5.mp3"
+          },
+          {
+            "language": "french",
+            "expression": "J'espère que",
+            "meaning": "I hope that",
+            "audio": "path/to/french_audio5.mp3"
+          },
+          {
+            "language": "russian",
+            "expression": "Надеюсь, что",
+            "meaning": "I hope that",
+            "audio": "path/to/russian_audio5.mp3"
+          }
+        ]
+      }
+    ]
+  }

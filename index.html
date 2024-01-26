@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>TalkTactics</title>
+  </head>
+  <body>
+    <header></header>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="jumbotron">
+      <h2>Welcome to TalkTactics</h2>
+      <p>
+        TalkTactics, developed by Chi-Chack LLC, is a cutting-edge language
+        learning app designed to enhance communication skills. It offers a
+        unique approach where users choose real-life situations, like 'Excusing
+        oneself' or 'Expressing pleasure,' and provides comprehensive lists of
+        phrases with translations. The app goes further by offering audio
+        recordings, ensuring users grasp both written and spoken language
+        nuances.
+      </p>
+      <div class="logo-container">
+        <div class="logo">
+          <img
+            src="https://www.chi-chack.com/wp-content/uploads/2022/10/15th-Anniversary-Logo-Final-Transparent-1.png"
+            alt="Chi-Chack LLC Logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <h2>Language Functions</h2>
+    <!-- New language selection dropdown -->
+    <select id="languageSelector" onchange="changeLanguage()">
+      <option value="arabic">Learn Arabic</option>
+      <option value="french">Learn French</option>
+      <option value="russian">Learn Russian</option>
+    </select>
+
+    <!-- New search bar -->
+    <input
+      type="text"
+      id="searchBar"
+      placeholder="Search for a language function..."
+      oninput="filterFunctions()"
+    />
+
+    <div id="jsonContent"></div>
+
+    <script>
+      // Function to fetch JSON data
+      async function fetchJsonData() {
+        try {
+          const response = await fetch("data.json");
+          const jsonData = await response.json();
+          return jsonData;
+        } catch (error) {
+          console.error("Error fetching JSON data:", error);
+        }
+      }
+
+      // Function to display JSON data in HTML
+      function displayJsonData(jsonData, selectedLanguage) {
+        var jsonContentDiv = document.getElementById("jsonContent");
+        jsonContentDiv.innerHTML = ""; // Clear existing content
+
+        jsonData.languageFunctions.forEach(function (languageFunction, index) {
+          var functionDiv = document.createElement("div");
+          functionDiv.classList.add("function-div");
+
+          var functionTitle = document.createElement("div");
+          functionTitle.classList.add("function-title");
+          functionTitle.textContent =
+            "Function " + (index + 1) + ": " + languageFunction.function;
+
+          functionDiv.appendChild(functionTitle);
+
+          var detailsDiv = document.createElement("div");
+          detailsDiv.classList.add("function-details");
+
+          languageFunction.translations.forEach(function (translation) {
+            if (translation.language === selectedLanguage) {
+              var translationDiv = document.createElement("div");
+              translationDiv.classList.add("translation");
+              translationDiv.innerHTML =
+                "<strong>Language:</strong> " +
+                translation.language +
+                "<br>" +
+                "<strong>Expression:</strong> " +
+                translation.expression +
+                "<br>" +
+                "<strong>Meaning:</strong> " +
+                translation.meaning;
+
+              // Add audio element
+              if (translation.audio) {
+                var audioElement = document.createElement("audio");
+                audioElement.controls = true;
+                audioElement.src = translation.audio;
+                translationDiv.appendChild(audioElement);
+              }
+
+              translationDiv.innerHTML += "<hr>";
+              detailsDiv.appendChild(translationDiv);
+            }
+          });
+
+          functionDiv.appendChild(detailsDiv);
+
+          // Add click event to toggle details visibility
+          functionDiv.addEventListener("click", function () {
+            detailsDiv.style.display =
+              detailsDiv.style.display === "none" ||
+              detailsDiv.style.display === ""
+                ? "block"
+                : "none";
+          });
+
+          jsonContentDiv.appendChild(functionDiv);
+        });
+      }
+
+      // Function to change language based on user selection
+      async function changeLanguage() {
+        var selectedLanguage =
+          document.getElementById("languageSelector").value;
+        var jsonData = await fetchJsonData();
+        displayJsonData(jsonData, selectedLanguage);
+      }
+
+      // Function to filter language functions based on the search input
+      function filterFunctions() {
+        var searchTerm = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        var functionDivs = document.querySelectorAll(".function-div");
+
+        functionDivs.forEach(function (functionDiv) {
+          var functionTitle = functionDiv
+            .querySelector(".function-title")
+            .textContent.toLowerCase();
+          var detailsDiv = functionDiv.querySelector(".function-details");
+          var isVisible = functionTitle.includes(searchTerm);
+
+          if (isVisible) {
+            detailsDiv.style.display = "block";
+          } else {
+            detailsDiv.style.display = "none";
+          }
+        });
+      }
+
+      // Call the function to initially display JSON data for the default language
+      changeLanguage();
+    </script>
+  </body>
+</html>
