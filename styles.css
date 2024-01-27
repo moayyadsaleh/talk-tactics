@@ -192,9 +192,3 @@ label {
   text-align: center;
   padding: 5px; /* Adjust the padding value to make the footer thinner */
 }
-
-.custom-black-button {
-  background-color: #000000; /* Very black color */
-  color: #ffffff; /* White text color */
-  /* Add any additional styling as needed */
-}
